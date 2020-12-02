@@ -22,7 +22,7 @@
 		{
       var posCam  = this.el.components.camera.camera.getWorldDirection()
       posCam.y = 0 
-      // this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
+      this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
 		}
 	});
 </script>
