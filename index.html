@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+
+  </head>
+  <body>
+    <script type="text/javascript">
+	AFRAME.registerComponent("listener", {
+		schema : 
+		{
+			stepFactor : {
+				type : "number",
+				default : 0.05
+			}
+		},
+    tick : function()
+		{
+      var posCam  = this.el.components.camera.camera.getWorldDirection()
+      posCam.y = 0 
+      // this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
+		}
+	});
+</script>
+
+    <a-scene>
+      <a-camera  listener="stepFactor:0.1" position="0 0 30">
+        <a-entity text="value: Hello World;" position="0 0 -1"></a-entity>
+
+        <a-entity id="cursor" cursor="fuse: true;fuseTimeout:500"
+          material="color:black"
+          geometry="primitive:ring"
+          position="0 0 -1"
+          scale="0.01 0.01 0.01"
+        ></a-entity>
+      </a-camera>
+      <a-assets>
+        <a-asset-item id="tree" src="models/scene.gltf"></a-asset-item>
+        <a-asset-item id="tree1" src="models/tree/scene.gltf"></a-asset-item>
+      </a-assets>
+      <a-entity environment="preset: forest;ground:flat; grid: cross"></a-entity>
+      <a-entity position="0 3 -1">
+        <a-text value="Hello, World!"></a-text>
+      </a-entity>
+      <!-- <a-entity position="0 3 -1">
+        <a-entity text-geometry="value: What's up"></a-entity>
+      </a-entity>
+      <a-entity position="2 3 4">
+        <a-entity text-geometry="value: What's up"></a-entity>
+      </a-entity>
+      <a-entity position="2 3 -1">
+        <a-entity text-geometry="value: What's up"></a-entity>
+      </a-entity>
+      <a-entity position="0 3 -4">
+        <a-entity text-geometry="value: What's up"></a-entity>
+      </a-entity>
+      <a-entity text-geometry="value: What's up"></a-entity>
+      <a-entity text-geometry="value: What's up"></a-entity>
+      <a-entity text-geometry="value: What's upezklf"></a-entity> -->
+      <a-entity id="tree-model" gltf-model="#tree1" scale="0.05 0.05 0.05" position="0 0 -3"></a-entity>
+    </a-scene>
+  </body>
+</html>
