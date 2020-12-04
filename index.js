@@ -3,15 +3,9 @@ var loading = true;
 var camera = document.querySelector('[camera]')
 var sceneEl = document.querySelector('a-scene');
 var entity = sceneEl.querySelector('#charizardentity');
-
-// var text = document.createElement("a-entity");
-// text.setAttribute("text", "value:Move the camera sight at the figure to pause/playMove the camera sight at the figure to pause/playMove the camera sight at the figure to pause/play");
-// camera.appendChild(text)
-//   text.setAttribute("position", {x:0, y:0 z:-1});
 var initialText = document.createElement('a-entity');
 initialText.id = "initialText"
 initialText.setAttribute("text", "value:Hello there!\n Sadly , the professor lost some pokemon in this forest !\n Can you help him by push them back in his hut right in front of you ??;color:black");
-// initialText.setAttribute("color",'value:black')
 document.querySelector('[camera]').appendChild(initialText);
 initialText.setAttribute('position', {x: 0, y: 0, z: -1});
 
@@ -80,7 +74,6 @@ if(e.detail.target.el){
     console.log(pokemon)
     loading=false
        }
-  
  }, 7000);
   
   
@@ -164,6 +157,8 @@ AFRAME.registerComponent("listener", {
     var posPlayer = this.el.components.camera.camera.parent.position
     posCam.y = 0 
     if(loading===false){
+      console.log(posCam)
+      console.log(posPlayer)
     if(verifPos(posCam,posPlayer)){
       // if(checkIfCabane(posCam,posPlayer)){
       this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
