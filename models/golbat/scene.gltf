@@ -1,0 +1,398 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        4.0002899169921875,
+        0.5757099986076355,
+        4.3144998550415039
+      ],
+      "min": [
+        -3.9993400573730469,
+        -0.45903998613357544,
+        -0.74355000257492065
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 786384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.99954831600189209,
+        0.99999958276748657,
+        0.99991869926452637
+      ],
+      "min": [
+        -0.99954831600189209,
+        -0.99999946355819702,
+        -0.99974215030670166
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.99996095895767212,
+        0.99997776746749878,
+        0.99999690055847168,
+        1
+      ],
+      "min": [
+        -0.99996095895767212,
+        -0.999808669090271,
+        -0.99999666213989258,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.99972999095916748,
+        0.99924999475479126
+      ],
+      "min": [
+        0.00025000001187436283,
+        0.00025000001187436283
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 378999,
+      "max": [
+        65531
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 7683,
+      "max": [
+        0,
+        0.54606997966766357,
+        4.3144998550415039
+      ],
+      "min": [
+        -4.0002899169921875,
+        -0.41775000095367432,
+        -0.74355000257492065
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1664964,
+      "componentType": 5126,
+      "count": 7683,
+      "max": [
+        0.9989314079284668,
+        0.99999958276748657,
+        0.99987369775772095
+      ],
+      "min": [
+        -0.99897670745849609,
+        -0.99999946355819702,
+        -0.99819880723953247
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 7683,
+      "max": [
+        0.99981147050857544,
+        0.99997776746749878,
+        0.99999690055847168,
+        1
+      ],
+      "min": [
+        -0.99847006797790527,
+        -0.99718368053436279,
+        -0.9753488302230835,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 524256,
+      "componentType": 5126,
+      "count": 7683,
+      "max": [
+        0.99966001510620117,
+        0.99055999517440796
+      ],
+      "min": [
+        0.032030001282691956,
+        0.022560000419616699
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1515996,
+      "componentType": 5125,
+      "count": 39993,
+      "max": [
+        7682
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Katerina Novakova (https://sketchfab.com/KaterinaNovakova)",
+      "license": "CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)",
+      "source": "https://sketchfab.com/models/d2de96324a2a45ba83aa4db84d62e8c2",
+      "title": "Pokemon - Golbat"
+    },
+    "generator": "Sketchfab-3.19.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1675968,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 585720,
+      "byteOffset": 1675968,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1757160,
+      "byteOffset": 2261688,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1171440,
+      "byteOffset": 4018848,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5190288,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/bat-texture_normal.png"
+    },
+    {
+      "uri": "textures/bat-texture_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "bat-texture",
+      "normalTexture": {
+        "index": 0,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Golbat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Golbat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.03526,
+        0.6113900000000001,
+        0.79054000000000002,
+        0,
+        -0.99937999999999994,
+        0.021080000000000005,
+        0.028280000000000003,
+        0,
+        0.00062000000000000022,
+        -0.79105000000000003,
+        0.61175000000000013,
+        0,
+        29.520739999999996,
+        -11.631129999999999,
+        16.056950000000004,
+        1
+      ],
+      "name": "Sun"
+    },
+    {
+      "name": "Sun"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.010060000000000001,
+        0,
+        3.6517999999999997,
+        1
+      ],
+      "name": "Golbat"
+    },
+    {
+      "mesh": 0,
+      "name": "Golbat_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Golbat_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
+

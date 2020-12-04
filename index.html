@@ -4,64 +4,75 @@
     <title>Hello, WebVR! - A-Frame</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
     <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
-
+<script>
+  setTimeout(function(){
+    
+ }, 3000);
+</script>
   </head>
   <body>
-    <script type="text/javascript">
-	AFRAME.registerComponent("listener", {
-		schema : 
-		{
-			stepFactor : {
-				type : "number",
-				default : 0.05
-			}
-		},
-    tick : function()
-		{
-      var posCam  = this.el.components.camera.camera.getWorldDirection()
-      posCam.y = 0 
-      this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
-		}
-	});
-</script>
-
-    <a-scene>
-      <a-camera  listener="stepFactor:0.1" position="0 0 30">
-        <a-entity text="value: Hello World;" position="0 0 -1"></a-entity>
-
-        <a-entity id="cursor" cursor="fuse: true;fuseTimeout:500"
+    <audio src="./audios/found.mp3" id="catch"></audio>
+    <a-scene sound="src: url(./audios/ambiance.mp3); loop:true; autoplay:true; volume:1;"
+    physics="debug:true">
+      <a-entity camera look-controls listener="stepFactor:0.2" position="0 2 30">
+        <a-entity id="cursor" static-body="shape:sphere; sphereRadius: 0.001;" cursor="fuse: true;fuseTimeout:100000000"
           material="color:black"
           geometry="primitive:ring"
-          position="0 0 -1"
+          position="0 0.1 -1"
           scale="0.01 0.01 0.01"
         ></a-entity>
-      </a-camera>
+      </a-entity>
       <a-assets>
-        <a-asset-item id="tree" src="models/scene.gltf"></a-asset-item>
-        <a-asset-item id="tree1" src="models/tree/scene.gltf"></a-asset-item>
+        <a-asset-item id="blastoise" src="models/blastoise/scene.gltf"></a-asset-item>
+        <a-asset-item id="charizard" src="models/charizard/scene.gltf"></a-asset-item>
+        <a-asset-item id="magnemite" src="models/magnemite/scene.gltf"></a-asset-item>
+        <a-asset-item id="golbat" src="models/golbat/scene.gltf"></a-asset-item>
+        <a-asset-item id="mew" src="models/mew/scene.gltf"></a-asset-item>
+        <a-asset-item id="caban" src="models/caban/scene.gltf"></a-asset-item>
+        <a-asset-item id="arceus" src="models/arceus/scene.gltf"></a-asset-item>
+        <a-asset-item id="palkia" src="models/palkia/scene.gltf"></a-asset-item>
       </a-assets>
       <a-entity environment="preset: forest;ground:flat; grid: cross"></a-entity>
-      <a-entity position="0 3 -1">
-        <a-text value="Hello, World!"></a-text>
+      <a-entity container>
+        <a-entity dynamic-body sound="src: url(./audios/charizard.mp3); loop:true; autoplay:true; volume:2;" pokemon="index:charizardentity" id="charizardentity" gltf-model="#charizard" scale="0.05 0.05 0.05" position="80 0.5 -35">
+        </a-entity>
+        <a-entity dynamic-body pokemon="index:blastoiseentity" id="blastoiseentity" gltf-model="#blastoise" scale="0.1 0.1 0.1" position="50 0.5 -3"></a-entity>  
+        <a-entity dynamic-body pokemon="index:mewentity" id="mewentity" gltf-model="#mew" scale="0.08 0.1 0.08" position="-40 0 -40"></a-entity>
+        <a-entity dynamic-body pokemon="index:golbatentity" id="golbatentity" gltf-model="#golbat" scale="1 1 2" position="-50 0 30"></a-entity>
+        <a-entity dynamic-body pokemon="index:magnemiteentity" id="magnemiteentity" gltf-model="#magnemite" scale="0.5 0.5 0.5" position="-80 1 70"></a-entity>
+  
+        <a-entity visible="false" id="arceusentity" gltf-model="#arceus" scale="0.08 0.1 0.08" position="-60 60 -60">
+          <a-animation
+          attribute="position"
+          dur="15000"
+          from = "-60 60 -60"
+          to = "0 70 0"
+          direction="alternate"
+          repeat="indefinite"
+          easing="linear"
+        >
+        </a-entity>
+        <a-entity visible="false" id="palkiaentity" gltf-model="#palkia" scale="1 1 1" position="60 0 60">
+          <a-animation
+          attribute="rotation"
+          dur="5000"
+          to="0 360 0"
+          repeat="indefinite"
+          easing="linear"
+        >
+        </a-entity>
+
+        <a-entity static-body id="cabanentity" gltf-model="#caban" scale="0.03 0.03 0.03" position="5 -1 -3"></a-entity>
       </a-entity>
-      <!-- <a-entity position="0 3 -1">
-        <a-entity text-geometry="value: What's up"></a-entity>
-      </a-entity>
-      <a-entity position="2 3 4">
-        <a-entity text-geometry="value: What's up"></a-entity>
-      </a-entity>
-      <a-entity position="2 3 -1">
-        <a-entity text-geometry="value: What's up"></a-entity>
-      </a-entity>
-      <a-entity position="0 3 -4">
-        <a-entity text-geometry="value: What's up"></a-entity>
-      </a-entity>
-      <a-entity text-geometry="value: What's up"></a-entity>
-      <a-entity text-geometry="value: What's up"></a-entity>
-      <a-entity text-geometry="value: What's upezklf"></a-entity> -->
-      <a-entity id="tree-model" gltf-model="#tree1" scale="0.05 0.05 0.05" position="0 0 -3"></a-entity>
+      <a-plane width="1000" 
+      position="0 -0.1 0"
+      height="1000" 
+      rotation="-90 0 0"
+      static-body></a-plane>
     </a-scene>
   </body>
+  <script src="./index.js"></script>
 </html>
