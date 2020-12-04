@@ -125,13 +125,11 @@ function printMessage($lastCapture) {
     var text = document.createElement('a-entity');
 text.id = "message"
 text.setAttribute("text", `value:${message}`);
-// text.setAttribute("color",'value:black')
 document.querySelector('[camera]').appendChild(text);
 text.setAttribute('position', {x: 0, y: 0, z: -1});
 return find.length;
 }
 
-// var el = document.querySelector("#charizard")
 AFRAME.registerComponent("listener", {
   schema : 
   {
@@ -161,13 +159,9 @@ AFRAME.registerComponent("listener", {
       console.log(posPlayer)
     if(verifPos(posCam,posPlayer)){
       console.log("kkk")
-      // if(checkIfCabane(posCam,posPlayer)){
         let newP = this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
         this.el.setAttribute('position', newP)
-      // this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
-        // }
       }
-      // console.log(checkIfCabane(posCam,posPlayer))
   }
 }
 });
@@ -279,11 +273,3 @@ AFRAME.registerComponent("pokemon", {
     }
   },
 })
-
-
-
-
-// x: 0 z: 4
-// x: 0 z: -13
-// xx: 11 z: -13
-// x : 11 z: -4
