@@ -160,8 +160,11 @@ AFRAME.registerComponent("listener", {
       console.log(posCam)
       console.log(posPlayer)
     if(verifPos(posCam,posPlayer)){
+      console.log("kkk")
       // if(checkIfCabane(posCam,posPlayer)){
-      this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
+        let newP = this.el.components.camera.camera.parent.position.add(this.el.components.camera.camera.getWorldDirection().multiplyScalar(this.data.stepFactor));
+        this.el.setAttribute('position', newP)
+      // this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
         // }
       }
       // console.log(checkIfCabane(posCam,posPlayer))
