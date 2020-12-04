@@ -169,7 +169,7 @@ AFRAME.registerComponent("listener", {
       this.el.components.camera.camera.parent.position.add(posCam.multiplyScalar(this.data.stepFactor));
         // }
       }
-      console.log(checkIfCabane(posCam,posPlayer))
+      // console.log(checkIfCabane(posCam,posPlayer))
   }
 }
 });
