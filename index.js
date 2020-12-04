@@ -65,7 +65,7 @@ if(e.detail.target.el){
   document.getElementById('catch').play();
   loading =true
 
-  if(printMessage(pokemonName)==5){
+  if(printMessage(pokemonName)==1){
     loadEndGame()
   }
      setTimeout(function(){
